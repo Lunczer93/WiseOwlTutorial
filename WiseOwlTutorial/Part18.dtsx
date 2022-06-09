@@ -1,0 +1,736 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/9/2022 8:06:34 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LUCAS"
+  DTS:CreatorName="Lucas\Lukasz"
+  DTS:DTSID="{EC93C518-AD5C-4E93-A1DE-9B882087DD9D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{3F0CE521-D31F-4210-85BA-9E059AD3CE2A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Lucas\SQLEXPRESS.SSISTraining]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F8A52425-ADB6-4DD4-B024-C6F924600B6E}"
+      DTS:ObjectName="Lucas\SQLEXPRESS.SSISTraining">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=Lucas\SQLEXPRESS;Initial Catalog=SSISTraining;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Birtions"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{82E84C4E-36A8-4ADE-818C-D2C8ED7940B2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Birtions"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Birtions\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Birtions\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Birtions\Data Conversion.Inputs[Data Conversion Input].Columns[WiseOwlVerdict]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="WiseOwlVerdict"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[WiseOwlVerdict]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Birtions\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Birtions\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Birtions\Data Conversion.Outputs[Data Conversion Output].Columns[Truncate Verdict]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="25"
+                      lineageId="Package\Birtions\Data Conversion.Outputs[Data Conversion Output].Columns[Truncate Verdict]"
+                      name="Truncate Verdict"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[WiseOwlVerdict]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Birtions\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Birtions\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Birtions\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Birtions\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Birtions\Import allegedly great Britions"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Import allegedly great Britions"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[GreatBritions]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Birtions\Import allegedly great Britions.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Lucas\SQLEXPRESS.SSISTraining]"
+                  connectionManagerRefId="Package.ConnectionManagers[Lucas\SQLEXPRESS.SSISTraining]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[BritonId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].ExternalColumns[BritonId]"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[BritonId]"
+                      name="BritonId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[BritionName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].ExternalColumns[BritionName]"
+                      length="255"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[BritionName]"
+                      name="BritionName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[Position]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].ExternalColumns[Position]"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[Position]"
+                      name="Position"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[WiseOwlVerdict]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].ExternalColumns[WiseOwlVerdict]"
+                      length="255"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[WiseOwlVerdict]"
+                      name="WiseOwlVerdict"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].ExternalColumns[BritonId]"
+                      dataType="i4"
+                      name="BritonId" />
+                    <externalMetadataColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].ExternalColumns[BritionName]"
+                      dataType="wstr"
+                      length="255"
+                      name="BritionName" />
+                    <externalMetadataColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].ExternalColumns[Position]"
+                      dataType="i4"
+                      name="Position" />
+                    <externalMetadataColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].ExternalColumns[WiseOwlVerdict]"
+                      dataType="wstr"
+                      length="255"
+                      name="WiseOwlVerdict" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[BritonId]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[BritonId]"
+                      name="BritonId" />
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[BritionName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[BritionName]"
+                      name="BritionName" />
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[Position]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[Position]"
+                      name="Position" />
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[WiseOwlVerdict]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[WiseOwlVerdict]"
+                      name="WiseOwlVerdict" />
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Birtions\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Birtions\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Birtions\Union All.Inputs[Union All Input 1].Columns[BritonId]"
+                      cachedDataType="i4"
+                      cachedName="BritonId"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[BritonId]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All.Outputs[Union All Output 1].Columns[BritonId]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All.Inputs[Union All Input 1].Columns[BritionName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BritionName"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[BritionName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All.Outputs[Union All Output 1].Columns[BritionName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All.Inputs[Union All Input 1].Columns[Position]"
+                      cachedDataType="i4"
+                      cachedName="Position"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[Position]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All.Outputs[Union All Output 1].Columns[Position]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All.Inputs[Union All Input 1].Columns[WiseOwlVerdict]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="WiseOwlVerdict"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[WiseOwlVerdict]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All.Outputs[Union All Output 1].Columns[WiseOwlVerdict]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All.Inputs[Union All Input 1].Columns[Truncate Verdict]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="Truncate Verdict"
+                      lineageId="Package\Birtions\Data Conversion.Outputs[Data Conversion Output].Columns[Truncate Verdict]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All.Outputs[Union All Output 1].Columns[Truncate Verdict]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Birtions\Union All.Inputs[Union All Input 2]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Birtions\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[BritonId]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[BritonId]"
+                      name="BritonId" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[BritionName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[BritionName]"
+                      name="BritionName" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[Position]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[Position]"
+                      name="Position" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[WiseOwlVerdict]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[WiseOwlVerdict]"
+                      name="WiseOwlVerdict" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[Truncate Verdict]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Birtions\Union All.Outputs[Union All Output 1].Columns[Truncate Verdict]"
+                      name="Truncate Verdict" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Birtions\Union All 1"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All 1"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Birtions\Union All 1.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Birtions\Union All 1.Inputs[Union All Input 1].Columns[BritonId]"
+                      cachedDataType="i4"
+                      cachedName="BritonId"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[BritonId]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[BritonId]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All 1.Inputs[Union All Input 1].Columns[BritionName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="BritionName"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[BritionName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[BritionName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All 1.Inputs[Union All Input 1].Columns[Position]"
+                      cachedDataType="i4"
+                      cachedName="Position"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[Position]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[Position]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All 1.Inputs[Union All Input 1].Columns[WiseOwlVerdict]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="WiseOwlVerdict"
+                      lineageId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output].Columns[WiseOwlVerdict]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[WiseOwlVerdict]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All 1.Inputs[Union All Input 1].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\Birtions\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Birtions\Union All 1.Inputs[Union All Input 1].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\Birtions\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Birtions\Union All 1.Inputs[Union All Input 2]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Birtions\Union All 1.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[BritonId]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[BritonId]"
+                      name="BritonId" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[BritionName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[BritionName]"
+                      name="BritionName" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[Position]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[Position]"
+                      name="Position" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[WiseOwlVerdict]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[WiseOwlVerdict]"
+                      name="WiseOwlVerdict" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[ErrorCode]"
+                      name="ErrorCode" />
+                    <outputColumn
+                      refId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Birtions\Union All 1.Outputs[Union All Output 1].Columns[ErrorColumn]"
+                      name="ErrorColumn" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Birtions.Paths[Data Conversion Error Output]"
+              endId="Package\Birtions\Union All 1.Inputs[Union All Input 1]"
+              name="Data Conversion Error Output"
+              startId="Package\Birtions\Data Conversion.Outputs[Data Conversion Error Output]" />
+            <path
+              refId="Package\Birtions.Paths[Data Conversion Output]"
+              endId="Package\Birtions\Union All.Inputs[Union All Input 1]"
+              name="Data Conversion Output"
+              startId="Package\Birtions\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Birtions.Paths[OLE DB Source Output]"
+              endId="Package\Birtions\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Birtions\Import allegedly great Britions.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="114,42"
+          Id="Package\Birtions"
+          TopLeft="164,102" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Birtions">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Birtions\Import allegedly great Britions"
+          TopLeft="156,54" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Birtions\Data Conversion"
+          TopLeft="188,174" />
+        <EdgeLayout
+          Id="Package\Birtions.Paths[OLE DB Source Output]"
+          TopLeft="266.5,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Birtions\Union All"
+          TopLeft="42,301" />
+        <EdgeLayout
+          Id="Package\Birtions.Paths[Data Conversion Output]"
+          TopLeft="241.333333333333,216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-138.833333333333,85"
+              Start="0,0"
+              End="-138.833333333333,77.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5177664974619" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5177664974619"
+                    Point2="0,34.5177664974619"
+                    Point3="-4,34.5177664974619" />
+                  <mssgle:LineSegment
+                    End="-134.833333333333,34.5177664974619" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-134.833333333333,34.5177664974619"
+                    Point2="-138.833333333333,34.5177664974619"
+                    Point3="-138.833333333333,38.5177664974619" />
+                  <mssgle:LineSegment
+                    End="-138.833333333333,77.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Birtions\Union All 1"
+          TopLeft="358,275" />
+        <EdgeLayout
+          Id="Package\Birtions.Paths[Data Conversion Error Output]"
+          TopLeft="290.666666666667,216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="132.333333333333,59"
+              Start="0,0"
+              End="132.333333333333,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.9593908629442" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.9593908629442"
+                    Point2="0,23.9593908629442"
+                    Point3="4,23.9593908629442" />
+                  <mssgle:LineSegment
+                    End="128.333333333333,23.9593908629442" />
+                  <mssgle:CubicBezierSegment
+                    Point1="128.333333333333,23.9593908629442"
+                    Point2="132.333333333333,23.9593908629442"
+                    Point3="132.333333333333,27.9593908629442" />
+                  <mssgle:LineSegment
+                    End="132.333333333333,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8.78837239583331,28.9593908629442,149.910078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Birtions\Import allegedly great Britions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
