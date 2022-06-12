@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/28/2022 5:26:47 PM"
@@ -12,7 +12,7 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="11"
-  DTS:VersionGUID="{C6202BC9-5905-4187-9F72-40D573468172}">
+  DTS:VersionGUID="{CDF7FC0A-7BB1-4E40-A692-E7E4DE08ADEC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\IT programming tutorials\SSIS\WiseOwlTutorial\X Factor contestants.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\IT programming tutorials\SSIS\WiseOwlTutorial\X Factor contestants.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -127,7 +127,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -282,7 +282,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -485,7 +485,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -682,7 +682,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -892,7 +892,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1011,7 +1011,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1295,7 +1295,7 @@ End Class]]></ProjectItem>
     <AppDesignerFolder>My Project</AppDesignerFolder>
     <RootNamespace>ST_dd818397fd1e411cb069205c02442655</RootNamespace>
     <AssemblyName>ST_dd818397fd1e411cb069205c02442655</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
     <TargetFrameworkProfile></TargetFrameworkProfile>
@@ -1326,8 +1326,8 @@ End Class]]></ProjectItem>
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -1374,7 +1374,7 @@ End Class]]></ProjectItem>
         <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
         <Host Name="ScriptTask" IconIndex=""></Host>
         <ProjectClient>
-          <HostIdentifier>SSIS_ST150</HostIdentifier>
+          <HostIdentifier>SSIS_ST140</HostIdentifier>
         </ProjectClient>
       </FlavorProperties>
     </VisualStudio>
@@ -1475,7 +1475,7 @@ End Class]]></ProjectItem>
     <msb:CodeName>ST_dd818397fd1e411cb069205c02442655</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_dd818397fd1e411cb069205c02442655</msb:DisplayName>
-    <msb:ProjectId>{C3055171-DCD2-444D-B40F-61DBF0BA6ACD}</msb:ProjectId>
+    <msb:ProjectId>{422DF41E-D432-4F5C-889A-0510ADB5286E}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_dd818397fd1e411cb069205c02442655.vbproj" />
@@ -1672,7 +1672,7 @@ End Namespace]]></ProjectItem>
           <BinaryItem
             Name="ST_dd818397fd1e411cb069205c02442655.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDACxYkmIAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAA9jkA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAKuCpGIAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAA9jkA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKQ5AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1727,8 +1727,8 @@ AKoCgAKLAAcBoAKLAAcBwAKLAAcB4AKLAAcB4AKDAKoCAAOLAAcBIAOLAAcBIAODAKoCbwCrAL4A
 BAABAAUABQAGAAcACQAIAAAAkwaEAQAAlQWJAQAAeQaOAQAABgeTAQAATQaYAQAAfAGdAQAARQSi
 AQAA4gCnAQIABAADAAIABQAFAAIABgAHAAIABwAJAAIACQALAAIACgANAAEACwANAAIADgAPAAIA
 GAARAC4ANQA8AEMAsADDANIA2QAEgAAAAQAAAAAAAAAAAAAAAAAzAAAABAAAAAAAAAAAAAAA5wCw
-AAAAAAAEAAAAAAAAAAAAAADnAE8FAAAAAAoAAAAAAAAAAAAAAPAAuQAAAAAADwAAAAAAAAAAAAAA
-+QCEBAAAAAAPAAAAAAAAAAAAAAD5AGAAAAAAAAQAAAAAAAAAAAAAAOcAVwgAAAAAAAAAAAEAAADw
+AAAAAAAEAAAAAAAAAAAAAADnAE8FAAAAAAoAAAAAAAAAAAAAAPAAuQAAAAAADgAAAAAAAAAAAAAA
++QCEBAAAAAAOAAAAAAAAAAAAAAD5AGAAAAAAAAQAAAAAAAAAAAAAAOcAVwgAAAAAAAAAAAEAAADw
 BwAACAAEAAkABAAKAAcAAAAQABIAfwAAABAAKwB/AAAAAAAtAH8AbwC5AG8A3AAAAABDb250ZXh0
 VmFsdWVgMQBUaHJlYWRTYWZlT2JqZWN0UHJvdmlkZXJgMQBUb0ludDMyAFNUX2RkODE4Mzk3ZmQx
 ZTQxMWNiMDY5MjA1YzAyNDQyNjU1ADxNb2R1bGU+AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuTWFuYWdl
@@ -1775,7 +1775,7 @@ bWJseQAAAAAxTQB5AC4AUgBlAHMAbwB1AHIAYwBlAHMALgBNAHkAUgBlAHMAbwB1AHIAYwBlAHMA
 ACNOAHUAbQBiAGUAcgBDAG8AbgB0AGUAcwB0AGEAbgB0AHMAABtOAHUAbQBiAGUAcgBNAGUAbgB0
 AG8AcgBzAAAZTgB1AG0AYgBlAHIAUwBlAHIAaQBlAHMAABVDAG8AbgB0AGUAcwB0AGEAbgB0AAAZ
 IAByAG8AdwBzAE0AZQBuAHQAbwByAHMAABcgAHIAbwB3AHMAUwBlAHIAaQBlAHMAAAsgAHIAbwB3
-AHMAAAAAADKna6qkwqdHn/4Nft/CKCwABCABAQgDIAABBSABARERBCABAQ4EIAEBAgUgAgEODgUg
+AHMAAAAAAKl4mg7vvrRMkP3nVkZFKFYABCABAQgDIAABBSABARERBCABAQ4EIAEBAgUgAgEODgUg
 AQERRQcgBAEODg4OBhUSJAESDAYVEiQBEggGFRIkARJlBhUSJAESIAQgABMABwABEm0RgJkFIAAS
 gJ0HIAIBDhKAnQQAARwcBAABARwFBwMICAgFIAASgKkFIAASgK0GIAESgLEcAyAAHAQAAQgcAyAA
 DgUAAQ4dDgYAARGAxQ4EIAECHAMgAAgEBwEeAAIeAAUQAQAeAAQKAR4ABAcBEwAGFRIkARMABwYV
@@ -1786,8 +1786,8 @@ HgAeAAcwAQEBEB4ABAgAEgwECAASCAQIABJlBAgAEiAECAASeQQIABJ9BAgAEhgEKAATAAgBAAgA
 AAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfZGQ4MTgz
 OTdmZDFlNDExY2IwNjkyMDVjMDI0NDI2NTUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMgAA
 BQEAAQAAKQEAJDM3MzI2Njg0LWVkNjMtNGViMy04YWI1LWJmMzFmMjk0YmU4NQAADAEABzEuMC4w
-LjAAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5h
-bWUSLk5FVCBGcmFtZXdvcmsgNC43CAEAAQAAAAAAGAEACk15VGVtcGxhdGUIMTEuMC4wLjAAAGEB
+LjAAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNQEAVA4URnJhbWV3b3JrRGlzcGxheU5h
+bWUSLk5FVCBGcmFtZXdvcmsgNC41CAEAAQAAAAAAGAEACk15VGVtcGxhdGUIMTEuMC4wLjAAAGEB
 ADRTeXN0ZW0uV2ViLlNlcnZpY2VzLlByb3RvY29scy5Tb2FwSHR0cENsaWVudFByb3RvY29sEkNy
 ZWF0ZV9fSW5zdGFuY2VfXxNEaXNwb3NlX19JbnN0YW5jZV9fAAAAEAEAC015LkNvbXB1dGVyAAAT
 AQAOTXkuQXBwbGljYXRpb24AAAwBAAdNeS5Vc2VyAAATAQAOTXkuV2ViU2VydmljZXMAALQAAADO

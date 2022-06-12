@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/6/2022 9:08:28 PM"
@@ -12,7 +12,7 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="11"
-  DTS:VersionGUID="{26FC9C00-14A0-4767-869F-29B4A506077A}">
+  DTS:VersionGUID="{1A854256-34DA-48AB-9182-CA8555AECA5B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -241,11 +241,11 @@ End Class]]></ProjectItem>
     <AppDesignerFolder>My Project</AppDesignerFolder>
     <RootNamespace>ST_0ad94b23b7ea47ae8b7c3742b57445f8</RootNamespace>
     <AssemblyName>ST_0ad94b23b7ea47ae8b7c3742b57445f8</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -257,7 +257,6 @@ End Class]]></ProjectItem>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
     <Optimize>true</Optimize>
@@ -268,16 +267,14 @@ End Class]]></ProjectItem>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
   </ItemGroup>
-
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -286,7 +283,6 @@ End Class]]></ProjectItem>
     <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
-
   <ItemGroup>
     <AppDesigner Include="My Project\" />
     <Compile Include="My Project\AssemblyInfo.vb">
@@ -316,26 +312,15 @@ End Class]]></ProjectItem>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-
   <!-- Include the build rules for a VB project.-->
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptTask"
-                           HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}"
-                           ApplicationType="usd"
-                           Language="vb"
-                           TemplatesPath=""
-                           DebugInfoCommandLine=""
-                           DebugInfoWorkingDir=""
-                           IconImageList=""/>
-
-        <Host Name="ScriptTask" IconIndex="">
-        </Host>
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptTask" IconIndex=""></Host>
         <ProjectClient>
-          <HostIdentifier>SSIS_ST150</HostIdentifier>
+          <HostIdentifier>SSIS_ST140</HostIdentifier>
         </ProjectClient>
       </FlavorProperties>
     </VisualStudio>
@@ -422,12 +407,12 @@ End Class]]></ProjectItem>
                   <ProjectItem
                     Name="Project"
                     Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
     <msb:CodeName>ST_0ad94b23b7ea47ae8b7c3742b57445f8</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_0ad94b23b7ea47ae8b7c3742b57445f8</msb:DisplayName>
-    <msb:ProjectId>{86CCF739-58E5-4A02-8235-DAA9C19CEC9D}</msb:ProjectId>
+    <msb:ProjectId>{7B81AF5F-48E7-432F-A44C-1CC658BD42B4}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_0ad94b23b7ea47ae8b7c3742b57445f8.vbproj" />
@@ -624,7 +609,7 @@ End Namespace]]></ProjectItem>
                   <BinaryItem
                     Name="ST_0ad94b23b7ea47ae8b7c3742b57445f8.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGx+n2IAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAAfjkA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAK6CpGIAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAAfjkA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAACw5AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -678,8 +663,8 @@ gwCpAoACiwAGAaACiwAGAcACiwAGAeACiwAGAeACgwCpAgADiwAGASADiwAGASADgwCpAm8AqgC9
 AAQAAQAFAAUABgAHAAkACAAAAJMGgwEAAJUFiAEAAHkGjQEAAAYHkgEAAE0GlwEAAHwBnAEAAEUE
 oQEAAOIApgECAAQAAwACAAUABQACAAYABwACAAcACQACAAkACwACAAoADQABAAsADQACAA4ADwAC
 ABgAEQAuADUAPABDAK8AwgDRANgABIAAAAEAAAAAAAAAAAAAAAAAMwAAAAQAAAAAAAAAAAAAAOYA
-sAAAAAAABAAAAAAAAAAAAAAA5gBPBQAAAAAKAAAAAAAAAAAAAADvALkAAAAAAA8AAAAAAAAAAAAA
-APgAhAQAAAAADwAAAAAAAAAAAAAA+ABgAAAAAAAEAAAAAAAAAAAAAADmAFcIAAAAAAAAAAABAAAA
+sAAAAAAABAAAAAAAAAAAAAAA5gBPBQAAAAAKAAAAAAAAAAAAAADvALkAAAAAAA4AAAAAAAAAAAAA
+APgAhAQAAAAADgAAAAAAAAAAAAAA+ABgAAAAAAAEAAAAAAAAAAAAAADmAFcIAAAAAAAAAAABAAAA
 8AcAAAgABAAJAAQACgAHAAAAEAASAH8AAAAQACsAfwAAAAAALQB/AG8AuABvANsAAAAAQ29udGV4
 dFZhbHVlYDEAVGhyZWFkU2FmZU9iamVjdFByb3ZpZGVyYDEAVG9JbnQzMgBTVF8wYWQ5NGIyM2I3
 ZWE0N2FlOGI3YzM3NDJiNTc0NDVmOAA8TW9kdWxlPgBNaWNyb3NvZnQuU3FsU2VydmVyLk1hbmFn
@@ -725,7 +710,7 @@ TWVzc2FnZUJveABTVF8wYWQ5NGIyM2I3ZWE0N2FlOGI3YzM3NDJiNTc0NDVmOC5NeQBnZXRfQXNz
 ZW1ibHkAAAAAMU0AeQAuAFIAZQBzAG8AdQByAGMAZQBzAC4ATQB5AFIAZQBzAG8AdQByAGMAZQBz
 AAANUwBlAHIAaQBlAHMAAA9NAGUAbgB0AG8AcgBzAAAlSQBtAHAAbwByAHQAOgAgAA0ACgBNAGUA
 bgB0AG8AcgBzACAAAB0gAHIAbwB3AHMADQAKAFMAZQByAGkAZQBzACAAAAsgAHIAbwB3AHMAAAAA
-AHlKEcMQs5hGg/TSrS2oJlsABCABAQgDIAABBSABARERBCABAQ4EIAEBAgUgAgEODgUgAQERRQcg
+ANIpkJF6uHhJhYHPocA4aCgABCABAQgDIAABBSABARERBCABAQ4EIAEBAgUgAgEODgUgAQERRQcg
 BAEODg4OBhUSJAESDAYVEiQBEggGFRIkARJlBhUSJAESIAQgABMABwABEm0RgJkFIAASgJ0HIAIB
 DhKAnQQAARwcBAABARwEBwIICAUgABKAqQUgABKArQYgARKAsRwDIAAcBAABCBwDIAAOBQABDh0O
 BgABEYDFDgQgAQIcAyAACAQHAR4AAh4ABRABAB4ABAoBHgAEBwETAAYVEiQBEwAHBhUScQETAAYV
@@ -736,8 +721,8 @@ AQEQHgAECAASDAQIABIIBAgAEmUECAASIAQIABJ5BAgAEn0ECAASGAQoABMACAEACAAAAAAAHgEA
 AQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTVF8wYWQ5NGIyM2I3ZWE0
 N2FlOGI3YzM3NDJiNTc0NDVmOAAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIyAAAFAQABAAAp
 AQAkNWRiMzkzMjItMzMxMy00MmNiLWIyZTgtMTIyZjE5ZTMxNzFjAAAMAQAHMS4wLjAuMAAASQEA
-Gi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVU
-IEZyYW1ld29yayA0LjcIAQABAAAAAAAYAQAKTXlUZW1wbGF0ZQgxMS4wLjAuMAAAYQEANFN5c3Rl
+Gi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVU
+IEZyYW1ld29yayA0LjUIAQABAAAAAAAYAQAKTXlUZW1wbGF0ZQgxMS4wLjAuMAAAYQEANFN5c3Rl
 bS5XZWIuU2VydmljZXMuUHJvdG9jb2xzLlNvYXBIdHRwQ2xpZW50UHJvdG9jb2wSQ3JlYXRlX19J
 bnN0YW5jZV9fE0Rpc3Bvc2VfX0luc3RhbmNlX18AAAAQAQALTXkuQ29tcHV0ZXIAABMBAA5NeS5B
 cHBsaWNhdGlvbgAADAEAB015LlVzZXIAABMBAA5NeS5XZWJTZXJ2aWNlcwAAALQAAADOyu++AQAA
@@ -819,7 +804,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1021,7 +1006,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."

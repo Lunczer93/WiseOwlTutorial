@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/7/2022 7:04:59 PM"
@@ -12,7 +12,7 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="8"
-  DTS:VersionGUID="{B96C5726-1D3E-461F-92DC-11F478542549}">
+  DTS:VersionGUID="{7A1768D9-C869-4B3E-8B4F-7C9965AC2084}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -337,12 +337,12 @@ End Class]]></ProjectItem>
           <ProjectItem
             Name="Project"
             Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:Language>msBuild</msb:Language>
     <msb:CodeName>ST_af2492bdacab4b08bbebeebc6b055181</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_af2492bdacab4b08bbebeebc6b055181</msb:DisplayName>
-    <msb:ProjectId>{9E7C4B0A-D979-4EB9-BF0F-05C96763BF43}</msb:ProjectId>
+    <msb:ProjectId>{B4EEF48F-79F7-46FC-969F-5CABD9563889}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_af2492bdacab4b08bbebeebc6b055181.vbproj" />
@@ -369,11 +369,11 @@ End Class]]></ProjectItem>
     <AppDesignerFolder>My Project</AppDesignerFolder>
     <RootNamespace>ST_af2492bdacab4b08bbebeebc6b055181</RootNamespace>
     <AssemblyName>ST_af2492bdacab4b08bbebeebc6b055181</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -385,7 +385,6 @@ End Class]]></ProjectItem>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
     <Optimize>true</Optimize>
@@ -396,16 +395,14 @@ End Class]]></ProjectItem>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
   </ItemGroup>
-
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -414,7 +411,6 @@ End Class]]></ProjectItem>
     <Import Include="System.Diagnostics" />
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
-
   <ItemGroup>
     <AppDesigner Include="My Project\" />
     <Compile Include="My Project\AssemblyInfo.vb">
@@ -444,26 +440,15 @@ End Class]]></ProjectItem>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-
   <!-- Include the build rules for a VB project.-->
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
-
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptTask"
-                           HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}"
-                           ApplicationType="usd"
-                           Language="vb"
-                           TemplatesPath=""
-                           DebugInfoCommandLine=""
-                           DebugInfoWorkingDir=""
-                           IconImageList=""/>
-
-        <Host Name="ScriptTask" IconIndex="">
-        </Host>
+        <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptTask" IconIndex=""></Host>
         <ProjectClient>
-          <HostIdentifier>SSIS_ST150</HostIdentifier>
+          <HostIdentifier>SSIS_ST140</HostIdentifier>
         </ProjectClient>
       </FlavorProperties>
     </VisualStudio>
@@ -654,7 +639,7 @@ End Namespace]]></ProjectItem>
           <BinaryItem
             Name="ST_af2492bdacab4b08bbebeebc6b055181.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAB2Jn2IAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAAAjkA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDALWCpGIAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAAAjkA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAALA4AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -707,7 +692,7 @@ AAUB4AKLAAUB4AKDAKgCAAOLAAUBIAOLAAUBIAODAKgCbwCpALwABAABAAUABQAGAAcACQAIAAAA
 kwaCAQAAlQWHAQAAeQaMAQAABgeRAQAATQaWAQAAfAGbAQAARQSgAQAA4gClAQIABAADAAIABQAF
 AAIABgAHAAIABwAJAAIACQALAAIACgANAAEACwANAAIADgAPAAIAGAARAC4ANQA8AEMArgDBANAA
 1wAEgAAAAQAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAAA5QCwAAAAAAAEAAAAAAAAAAAAAADl
-AE8FAAAAAAoAAAAAAAAAAAAAAO4AuQAAAAAADwAAAAAAAAAAAAAA9wCEBAAAAAAPAAAAAAAAAAAA
+AE8FAAAAAAoAAAAAAAAAAAAAAO4AuQAAAAAADgAAAAAAAAAAAAAA9wCEBAAAAAAOAAAAAAAAAAAA
 AAD3AGAAAAAAAAQAAAAAAAAAAAAAAOUAVwgAAAAAAAAAAAEAAADwBwAACAAEAAkABAAKAAcAAAAQ
 ABIAfwAAABAAKwB/AAAAAAAtAH8AbwC3AG8A2gAAAABTVF9hZjI0OTJiZGFjYWI0YjA4YmJlYmVl
 YmM2YjA1NTE4MQBDb250ZXh0VmFsdWVgMQBUaHJlYWRTYWZlT2JqZWN0UHJvdmlkZXJgMQBUb0lu
@@ -752,8 +737,8 @@ dFJlc3VsdHMAQ29uY2F0AG1fU3luY09iamVjdABNeVByb2plY3QARXhpdABEaWFsb2dSZXN1bHQA
 c2V0X1Rhc2tSZXN1bHQAQ29udmVydABtX0NvbnRleHQAU2hvdwBNZXNzYWdlQm94AFNUX2FmMjQ5
 MmJkYWNhYjRiMDhiYmViZWViYzZiMDU1MTgxLk15AGdldF9Bc3NlbWJseQAAAAAxTQB5AC4AUgBl
 AHMAbwB1AHIAYwBlAHMALgBNAHkAUgBlAHMAbwB1AHIAYwBlAHMAAA1BAG4AcwB3AGUAcgAAL1QA
-aABlACAAbQBlAGEAbgBpAG4AZwAgAG8AZgAgAGwAaQBmAGUAOgAgAA0ACgAAAAAAy/yIUqQAb0Gq
-olLm81Q/KAAEIAEBCAMgAAEFIAEBEREEIAEBDgQgAQECBSACAQ4OBSABARFFByAEAQ4ODg4GFRIk
+aABlACAAbQBlAGEAbgBpAG4AZwAgAG8AZgAgAGwAaQBmAGUAOgAgAA0ACgAAAAAAVyDscPPJh0uk
+R87w/rWIDwAEIAEBCAMgAAEFIAEBEREEIAEBDgQgAQECBSACAQ4OBSABARFFByAEAQ4ODg4GFRIk
 ARIMBhUSJAESCAYVEiQBEmUGFRIkARIgBCAAEwAHAAESbRGAmQUgABKAnQcgAgEOEoCdBAABHBwE
 AAEBHAMHAQgFIAASgKkFIAASgK0GIAESgLEcAyAAHAQAAQgcAyAADgUAAg4ODgYAARGAxQ4EIAEC
 HAMgAAgEBwEeAAIeAAUQAQAeAAQKAR4ABAcBEwAGFRIkARMABwYVEnEBEwAGFRJxARMAAhMABAoB
@@ -764,8 +749,8 @@ CAASCAQIABJlBAgAEiAECAASeQQIABJ9BAgAEhgEKAATAAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5v
 bkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfYWYyNDkyYmRhY2FiNGIwOGJiZWJlZWJj
 NmIwNTUxODEAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMgAABQEAAQAAKQEAJGYzOTYyNjZh
 LTkxM2EtNDU0Ny1iYzE1LTI5MmI4NzkzYzhlMwAADAEABzEuMC4wLjAAAEkBABouTkVURnJhbWV3
-b3JrLFZlcnNpb249djQuNwEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsg
-NC43CAEAAQAAAAAAGAEACk15VGVtcGxhdGUIMTEuMC4wLjAAAGEBADRTeXN0ZW0uV2ViLlNlcnZp
+b3JrLFZlcnNpb249djQuNQEAVA4URnJhbWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsg
+NC41CAEAAQAAAAAAGAEACk15VGVtcGxhdGUIMTEuMC4wLjAAAGEBADRTeXN0ZW0uV2ViLlNlcnZp
 Y2VzLlByb3RvY29scy5Tb2FwSHR0cENsaWVudFByb3RvY29sEkNyZWF0ZV9fSW5zdGFuY2VfXxNE
 aXNwb3NlX19JbnN0YW5jZV9fAAAAEAEAC015LkNvbXB1dGVyAAATAQAOTXkuQXBwbGljYXRpb24A
 AAwBAAdNeS5Vc2VyAAATAQAOTXkuV2ViU2VydmljZXMAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0

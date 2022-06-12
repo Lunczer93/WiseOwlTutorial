@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/7/2022 6:41:42 PM"
@@ -12,7 +12,7 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="7"
-  DTS:VersionGUID="{FC1945EB-361C-4BEA-A9B8-3EE91371E4D8}">
+  DTS:VersionGUID="{802DB8BD-B59D-4049-AFA4-90EA04D8AEBD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -206,7 +206,7 @@ End Class]]></ProjectItem>
     <AppDesignerFolder>My Project</AppDesignerFolder>
     <RootNamespace>ST_6be174bfc4eb4a679552d3d74ba268b7</RootNamespace>
     <AssemblyName>ST_016c04b720db42a79612925ebecc58c7</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
     <TargetFrameworkProfile></TargetFrameworkProfile>
@@ -237,8 +237,8 @@ End Class]]></ProjectItem>
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -285,7 +285,7 @@ End Class]]></ProjectItem>
         <ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
         <Host Name="ScriptTask" IconIndex=""></Host>
         <ProjectClient>
-          <HostIdentifier>SSIS_ST150</HostIdentifier>
+          <HostIdentifier>SSIS_ST140</HostIdentifier>
         </ProjectClient>
       </FlavorProperties>
     </VisualStudio>
@@ -377,7 +377,7 @@ End Class]]></ProjectItem>
     <msb:CodeName>ST_016c04b720db42a79612925ebecc58c7</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_016c04b720db42a79612925ebecc58c7</msb:DisplayName>
-    <msb:ProjectId>{07B17391-8431-46EF-ABC3-B112EAA46836}</msb:ProjectId>
+    <msb:ProjectId>{3771C63F-0357-4E2E-A523-B44082A9E996}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_016c04b720db42a79612925ebecc58c7.vbproj" />
@@ -574,7 +574,7 @@ End Namespace]]></ProjectItem>
                   <BinaryItem
                     Name="ST_016c04b720db42a79612925ebecc58c7.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDANWEn2IAAAAAAAAAAOAAIiALAVAAABgAAAAIAAAAAAAApjcA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDALGCpGIAAAAAAAAAAOAAIiALAVAAABgAAAAIAAAAAAAApjcA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAFQ3AABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -624,7 +624,7 @@ gAKLAN8AoAKLAN8AwAKLAN8A4AKLAN8A4AKDAIICAAOLAN8AIAOLAN8AIAODAIICgwCWAAQAAQAF
 AAUABgAHAAkACAAAAEwGXAEAAE4FYQEAADIGZgEAAL8GawEAAAYGcAEAAFABdQEAABkEegEAAN8A
 fwECAAQAAwACAAUABQACAAYABwACAAcACQACAAkACwACAAoADQABAAsADQACAA4ADwACABgAEQAu
 ADUAPABDAIgAmwCqALEABIAAAAEAAAAAAAAAAAAAAAAATwAAAAQAAAAAAAAAAAAAAL8ArQAAAAAA
-BAAAAAAAAAAAAAAAvwAIBQAAAAAKAAAAAAAAAAAAAADIALYAAAAAAA8AAAAAAAAAAAAAANEAWAQA
+BAAAAAAAAAAAAAAAvwAIBQAAAAAKAAAAAAAAAAAAAADIALYAAAAAAA4AAAAAAAAAAAAAANEAWAQA
 AAAABAAAAAAAAAAAAAAAvwACCAAAAAAAAAAAAQAAAKkHAAAIAAQACQAEAAoABwAAABAAEgB8AAAA
 EAArAHwAAAAAAC0AfABfAJEAXwC0AAAAAAAAQ29udGV4dFZhbHVlYDEAVGhyZWFkU2FmZU9iamVj
 dFByb3ZpZGVyYDEAU1RfNmJlMTc0YmZjNGViNGE2Nzk1NTJkM2Q3NGJhMjY4YjcAU1RfMDE2YzA0
@@ -667,7 +667,7 @@ cnMAU3VjY2VzcwBTY3JpcHRSZXN1bHRzAG1fU3luY09iamVjdABNeVByb2plY3QARXhpdABEaWFs
 b2dSZXN1bHQAbV9Db250ZXh0AFNob3cATWVzc2FnZUJveABTVF82YmUxNzRiZmM0ZWI0YTY3OTU1
 MmQzZDc0YmEyNjhiNy5NeQBnZXRfQXNzZW1ibHkAAAAxTQB5AC4AUgBlAHMAbwB1AHIAYwBlAHMA
 LgBNAHkAUgBlAHMAbwB1AHIAYwBlAHMAADVUAGgAZQAgAG0AZQBhAG4AaQBuAGcAIABvAGYAIABs
-AGkAZgBlACAAaQBzACAANAAyACAAAAAAAN5RCJS1n/RHoKuszAgi0zsABCABAQgDIAABBSABARER
+AGkAZgBlACAAaQBzACAANAAyACAAAAAAANaNgGBP0opFsdxlkH4NiX4ABCABAQgDIAABBSABARER
 BCABAQ4EIAEBAgUgAgEODgUgAQERRQcgBAEODg4OBhUSJAESDAYVEiQBEggGFRIkARJlBhUSJAES
 IAQgABMABwABEm0RgJkFIAASgJ0HIAIBDhKAnQQAARwcBAABARwGAAERgK0OBCABAhwDIAAIAyAA
 DgQHAR4AAh4ABRABAB4ABAoBHgAEBwETAAYVEiQBEwAHBhUScQETAAYVEnEBEwACEwAECgETAAUg
@@ -678,7 +678,7 @@ BAgAEmUECAASIAQIABJ5BAgAEn0ECAASGAQoABMACAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhj
 ZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTVF82YmUxNzRiZmM0ZWI0YTY3OTU1MmQzZDc0YmEy
 NjhiNwAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDIyAAAFAQABAAApAQAkNzkwNDBjY2UtZjM1
 ZS00MTA0LTk0ZmMtNzE5ODhmMzI2ZDNiAAAMAQAHMS4wLjAuMAAASQEAGi5ORVRGcmFtZXdvcmss
-VmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjcI
+VmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjUI
 AQABAAAAAAAYAQAKTXlUZW1wbGF0ZQgxMS4wLjAuMAAAYQEANFN5c3RlbS5XZWIuU2VydmljZXMu
 UHJvdG9jb2xzLlNvYXBIdHRwQ2xpZW50UHJvdG9jb2wSQ3JlYXRlX19JbnN0YW5jZV9fE0Rpc3Bv
 c2VfX0luc3RhbmNlX18AAAAQAQALTXkuQ29tcHV0ZXIAABMBAA5NeS5BcHBsaWNhdGlvbgAADAEA
